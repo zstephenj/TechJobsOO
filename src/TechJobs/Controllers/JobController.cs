@@ -52,7 +52,7 @@ namespace TechJobs.Controllers
 
                 };
                 jobData.Jobs.Add(newJob);
-                return RedirectToAction("Index", "Job", new { id = newJob.ID });
+                return Redirect(string.Format("/Job?={0}", newJob.ID));
             }
 
             return View(newJobViewModel);
